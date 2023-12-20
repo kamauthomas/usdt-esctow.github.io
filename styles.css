@@ -1,0 +1,245 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #191919;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    max-width: 80%;
+    margin: 50px auto;
+    background-color: #F2FFE9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.handshake-logo {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 40px;
+    color: #007BFF;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+
+}
+
+.instructions {
+    font-size: 16px;
+    text-align: center;
+}
+
+.escrow-address {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #776B5D;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12x;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus{
+    border-color:#007bff ;
+}
+
+button {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+
+
+.contact-section {
+    margin-top: 40px; /* Adjust margin for spacing */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-section a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.about-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.review img {
+    border-radius: 50%;
+    width: 80px; /* Adjust the width to your preference */
+    height: 80px; /* Adjust the height to your preference */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+/* style.css */
+
+.reviews-container {
+    width: 100%; /* Set the width to 100% to accommodate reviews */
+    overflow: hidden;
+}
+
+/* style.css */
+
+.reviews-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review {
+    flex: 0 0 100%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.review.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+.scroll-up-btn {
+    position: fixed;
+    bottom: 50px; /* Adjusted to be slightly above the bottom */
+    right: 20px;
+    background-color: #1F1717;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 0.5;
+}
+
+.scroll-up-btn i{
+    font-size: 20px;
+}
+
+.scroll-up-btn:hover {
+    background-color: #0056b3;
+    opacity: 1;
+}
+
+#transactionOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 20px;
+    color: #4caf50;
+}
+
+@media screen and(min-width: 768px) {
+    .container{
+        max-width: 60%;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        max-width: 40%;
+    }
+    
+}

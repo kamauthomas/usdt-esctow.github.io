@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Escrow USDT</title>
+</head>
+    <body>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <div class="container">
+
+            <div class="handshake-logo">
+                <i class="fas fa-handshake"></i>
+            </div>
+
+            <h1>Escrow USDT!</h1>
+            <p class="instructions">
+                To initiate the escrow transaction, deposit the funds to the provided ESCROW USDT address.
+                In case of any disagreement, the funds will be securely sent back to you.
+            </p>
+
+            <div class="escrow-slider">
+                <div class="escrow-address">
+                    <strong>Escrow Address:</strong>
+                    <p>TUDqN2vd6jkQ4zMAw9UR9XMMP46n15zNqf</p>
+                </div>
+            </div>
+            
+
+            <label for="receiverAddress">Receiver's USDT Address:</label>
+            <input type="text" id="receiverAddress" placeholder="Enter receiver's USDT address">
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+
+            <label for="buyer">Buyer's Name:</label>
+            <input type="text" id="buyer" placeholder="Enter buyer's name">
+
+            <label for="seller">Seller's Name:</label>
+            <input type="text" id="seller" placeholder="Enter seller's name">
+
+            <label for="transactionId">Transaction ID:</label>
+            <input type="text" id="transactionId" placeholder="Enter Binance transaction ID">
+
+            <button id="startEscrowButton" onclick="startEscrow()">Start Escrow</button>
+
+            <div id="transactionOptions" style="display: none;">
+                <p>Select an option:</p>
+                <label for="releaseFunds">Release Funds</label>
+                <input type="checkbox" id="releaseFunds" name="transactionOption">
+
+                <label for="refund">Refund</label>
+                <input type="checkbox" id="refund" name="transactionOption">
+            </div>
+
+            <button id="completeTransactionButton" onclick="completeTransaction()" disabled>Complete Transaction</button>
+
+            <p id="result"></p>
+
+
+            <div class="about-section">
+                <h2>About Us</h2>
+                <p>Welcome to our escrow service! We are dedicated to ensuring secure and trustworthy transactions for our users. Our platform facilitates smooth and reliable exchanges, giving you peace of mind during transactions.</p>
+                <p>Whether you're a buyer or a seller, our escrow service acts as a neutral third party, holding funds until both parties fulfill their obligations. Feel free to explore the features of our site and don't hesitate to reach out if you have any questions or concerns.</p>
+            </div>
+            
+            
+
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <p>For any inquiries or assistance, feel free to reach out to us:</p>
+                <p>Email: <a href="mailto:contact@example.com">escrowusdt@gmail.com</a></p>
+            </div>
+
+            <button class="scroll-up-btn" onclick="scrollToTop()">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+            
+
+        </div>
+
+        <script>
+            // Scroll to top button
+            function scrollToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+            // Show/hide scroll to top button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                var scrollBtn = document.querySelector(".scroll-up-btn");
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    scrollBtn.style.display = "block";
+                } else {
+                    scrollBtn.style.display = "none";
+                }
+            }
+        </script>
+
+        <script src="script.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('.escrow-slider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 5000, // Adjust the speed as needed
+                    arrows: false, // Set to false if you don't want navigation arrows
+                    dots: false // Set to false if you don't want navigation dots
+                });
+            });
+        </script>
+        
+
+    </body>
+</html>
