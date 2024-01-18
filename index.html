@@ -29,13 +29,11 @@
                 In case of any disagreement, the funds will be securely sent back to you.
             </p>
 
-            <div class="escrow-slider">
-                <div class="escrow-address">
-                    <strong>Escrow Address:</strong>
-                    <p>TUDqN2vd6jkQ4zMAw9UR9XMMP46n15zNqf</p>
-                </div>
+            <div class="escrow-address">
+                <strong>Escrow Address:</strong>
+                <p id="escrowAddress">TUDqN2vd6jkQ4zMA<br>w9UR9XMMP46n15zNqf</p>
+                <button onclick="copyToClipboard('escrowAddress')">Copy</button>
             </div>
-            
 
             <label for="receiverAddress">Receiver's USDT Address:</label>
             <input type="text" id="receiverAddress" placeholder="Enter receiver's USDT address">
@@ -50,7 +48,7 @@
             <input type="text" id="seller" placeholder="Enter seller's name">
 
             <label for="transactionId">Transaction ID:</label>
-            <input type="text" id="transactionId" placeholder="Enter Binance transaction ID">
+            <input type="text" id="transactionId" placeholder="Enter transaction ID">
 
             <button id="startEscrowButton" onclick="startEscrow()">Start Escrow</button>
 
